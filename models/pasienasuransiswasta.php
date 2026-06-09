@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . 'Pasien.php';
+require_once __DIR__ . '/Pasien.php';
 
 class PasienAsuransiSwasta extends Pasien
 {
