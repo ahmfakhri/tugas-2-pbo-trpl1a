@@ -55,8 +55,7 @@ if ($filter === 'bpjs') {
         if ($p->getJenisPasien() === "Asuransi Swasta") $daftarPasien[] = $p;
     }
 } else {
-    // Jika 'all' atau tidak ada filter, tampilkan semua pasien
-    $daftarPasien = $semuaPasienKlaim;
+    $daftarPasien = $semuaPasienKlaim; // Menampilkan seluruh data urat 1-48
 }
 ?>
 <!DOCTYPE html>
@@ -167,9 +166,6 @@ if ($filter === 'bpjs') {
                         </a>
                     <?php endif; ?>
                     
-                    <button type="button" class="btn btn-primary d-flex align-items-center gap-2 shadow-sm" data-bs-toggle="modal" data-bs-target="#modalTambahPasien">
-                        <i class="bi bi-plus-lg"></i> Tambah Pasien Baru
-                    </button>
                 </div>
             </div>
 
