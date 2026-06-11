@@ -184,7 +184,7 @@ classDiagram.png
 
 Tampilan gambar UML:
 
-classDiagram.png
+![Class Diagram UML](classDiagram.png)
 
 
 ---
