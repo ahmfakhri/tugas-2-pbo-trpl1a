@@ -9,7 +9,7 @@ require_once __DIR__ . '/models/pasien.php';
 require_once __DIR__ . '/models/pasienumum.php';
 require_once __DIR__ . '/models/pasienBPJS.php';
 require_once __DIR__ . '/models/pasienasuransiswasta.php';
-
+// Melakukan extends ke class Koneksi agar bisa menggunakan atribut database ($this->conn)
 class PasienController extends Koneksi
 {
     public function __construct()

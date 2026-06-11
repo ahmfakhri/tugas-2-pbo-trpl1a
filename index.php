@@ -24,7 +24,9 @@ if (isset($_GET['action']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Ambil semua objek data pasien untuk menghitung statistik total asli
+// GANTI MENJADI INI:
 $semuaPasienKlaim = $controller->tampilkanSemuaPasien();
+$daftarPasien = $semuaPasienKlaim;
 
 // Hitung statistik ringkas awal untuk card dashboard
 $totalPasien = count($semuaPasienKlaim);
@@ -190,9 +192,9 @@ if ($filter === 'bpjs') {
                                 </td>
                             </tr>
                         <?php else: ?>
-                            <?php foreach ($daftarPasien as $p): ?>
+                            <?php foreach ($daftarPasien as $key => $p): ?>
                                 <tr>
-                                    <td class="text-muted fw-bold">#<?php echo $p->getIdPasien(); ?></td>
+                                    <td class="text-muted fw-bold">#<?php echo $key + 1; ?></td>
                                     <td>
                                         <span class="d-block fw-bold text-dark"><?php echo htmlspecialchars($p->getNama()); ?></span>
                                         <small class="text-muted" style="font-size: 11px;">
