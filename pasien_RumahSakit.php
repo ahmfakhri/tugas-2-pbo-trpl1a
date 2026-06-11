@@ -1,16 +1,15 @@
 <?php
 // pasien_RumahSakit.php
 
-// 1. Koneksi.php berada langsung di folder utama (naik 1 tingkat)
-require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'Koneksi.php'; 
+// 1. Koneksi.php berada di folder yang sama dengan file ini
+require_once __DIR__ . '/koneksi.php'; 
 
-// 2. File model berada di dalam folder 'models' (naik 1 tingkat, lalu masuk ke folder models)
-require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'pasien.php';
-require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'pasienumum.php';
-require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'pasienBPJS.php';
-require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'pasienasuransiswasta.php';
+// 2. Masuk ke dalam folder 'models' yang ada di folder ini
+require_once __DIR__ . '/models/pasien.php';
+require_once __DIR__ . '/models/pasienumum.php';
+require_once __DIR__ . '/models/pasienBPJS.php';
+require_once __DIR__ . '/models/pasienasuransiswasta.php';
 
-// Melakukan extends ke class Koneksi agar bisa menggunakan atribut database ($this->conn)
 class PasienController extends Koneksi
 {
     public function __construct()

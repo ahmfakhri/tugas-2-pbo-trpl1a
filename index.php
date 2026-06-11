@@ -2,7 +2,7 @@
 // Dashboard/index.php
 
 // Panggil file controller
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'pasien_RumahSakit.php';
+require_once 'pasien_RumahSakit.php';
 
 $controller = new PasienController();
 $pesan = "";
